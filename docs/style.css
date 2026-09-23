@@ -1,0 +1,87 @@
+
+:root{
+  --red:#9E2A2B;
+  --gold:#E09F3E;
+  --cream:#FFF8ED;
+  --coffee:#2B2118;
+  --olive:#6A994E;
+  --card:#FFFFFF;
+  --muted:#7A6D62;
+  --line:#EEDFCB;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--coffee);
+  background:
+    radial-gradient(circle at top left,rgba(224,159,62,.18),transparent 35%),
+    radial-gradient(circle at top right,rgba(158,42,43,.08),transparent 30%),
+    var(--cream);
+  line-height:1.72;
+}
+a{color:var(--red);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1000px;margin:auto;padding:28px 20px 72px}
+.hero,.article{
+  background:rgba(255,255,255,.96);
+  border:1px solid var(--line);
+  box-shadow:0 24px 70px rgba(43,33,24,.09);
+}
+.hero{padding:44px;border-radius:30px}
+.article{margin-top:22px;padding:32px;border-radius:26px}
+.badge{
+  display:inline-flex;
+  padding:7px 13px;
+  border-radius:999px;
+  background:#F7E6D0;
+  color:var(--red);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.09em;
+}
+h1{font-size:clamp(38px,7vw,64px);line-height:1;margin:16px 0 12px}
+h2{font-size:25px;margin-top:34px;margin-bottom:8px}
+p,li{color:#473C34}
+.muted{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:24px}
+.card{
+  padding:20px;
+  border-radius:22px;
+  background:#FFFDF9;
+  border:1px solid var(--line);
+}
+.card strong{display:block;margin-bottom:6px;color:var(--coffee)}
+.nav{display:flex;gap:12px;flex-wrap:wrap;margin:25px 0 0}
+.btn{
+  display:inline-block;
+  padding:11px 16px;
+  border-radius:14px;
+  background:var(--red);
+  color:#fff;
+  font-weight:900;
+}
+.btn.alt{
+  background:#FFFDF9;
+  border:1px solid var(--line);
+  color:var(--coffee);
+}
+.notice{
+  padding:17px 19px;
+  border-radius:16px;
+  background:#F3F7ED;
+  border-left:4px solid var(--olive);
+  color:#2E3B2A;
+}
+code{
+  background:#F4EBDD;
+  padding:3px 7px;
+  border-radius:8px;
+  color:#594A3E;
+}
+footer{margin-top:30px;color:var(--muted);font-size:14px}
+@media(max-width:600px){
+  .wrap{padding:18px 14px 50px}
+  .hero,.article{padding:22px}
+}
